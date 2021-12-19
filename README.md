@@ -1,5 +1,5 @@
 
-# FrontPay <a name="Introducation"></a>
+# FrontPay iOS SDK <a name="Introducation"></a>
 FrontPay offers best online payment gateway and end to end payment solution for individuals, small and enterprise businesses in Pakistan. FrontPay accepts local and international payments in Pakistan.
 
 This integration guide is for iOS developers who want to integrate FrontPay framework in their projects for payment processing.
