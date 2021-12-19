@@ -170,7 +170,7 @@
                                     <constraint firstAttribute="height" constant="68" id="Fhx-1M-tlS"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BEFCEEB1-B491-4B7E-922E-54F51E500B2D" borderStyle="roundedRect" placeholder="Transaction Reference" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="57a-e1-PSx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="981AF8D5-BCC4-445E-9530-755007DA8C2A" borderStyle="roundedRect" placeholder="Transaction Reference" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="57a-e1-PSx">
                                 <rect key="frame" x="20" y="200" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>

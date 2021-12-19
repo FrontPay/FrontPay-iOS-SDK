@@ -23,12 +23,16 @@ class PaymentInqueryViewController: UIViewController {
 
     @IBAction func checkPaymentResponse(){
         
+        if (tfReference.text ?? "").isEmpty{
+            self.showAlert("Please input transaction reference first.")
+            return
+        }
         activityIndicatorView.startAnimating()
         
         //create FrontPayConfig
         let config = FrontPayConfig.with(paymentMode:PAYMENT_MODE.TEST, merchantId:"72806695", merchantSecret:"fp-client-secret-0729065549")
         //start paying
-        let vcnt = FrontPayPaymentManager.paymentInquiry(config: config, transaction_reference:"BEFCEEB1-B491-4B7E-922E-54F51E500B2D")
+        let vcnt = FrontPayPaymentManager.paymentInquiry(config: config, transaction_reference:tfReference.text ?? "")
         vcnt.completionHandlerSuccess = { response in
             print("success response=",response ?? "")
             var resultValues = [String]()
@@ -54,6 +58,14 @@ class PaymentInqueryViewController: UIViewController {
             self.activityIndicatorView.stopAnimating()
         }
  
+    }
+    
+    func showAlert(_ msg:String){
+        let alert = UIAlertController(title: "Hang On!", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }

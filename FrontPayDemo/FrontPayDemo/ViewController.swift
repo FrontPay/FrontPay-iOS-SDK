@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let currency = tfCurrency.text ?? "PKR"
         
         //create FrontPayConfig
-        let config = FrontPayConfig.with(paymentMode:PAYMENT_MODE.TEST, merchantId:"72806695", merchantSecret:"fp-client-secret-0729065549")
+        let config = FrontPayConfig.with(paymentMode:PAYMENT_MODE.TEST, merchantId:"72806695", merchantSecret:"fp-client-secret-0729065549", screenTitle: "Make Payment")
         
         //create payment object
         let payment = FrontPayPayment.with(amount: amount, currency: currency, transaction_reference: UUID().uuidString, fp_param1: "Smart Band", fp_param2: "FrontPay Retails", fp_param3: nil)

@@ -25,8 +25,9 @@ public enum PAYMENT_MODE : Swift.String {
   public var mode: FrontPay.PAYMENT_MODE
   public var fp_merchant_id: Swift.String?
   public var fp_merchant_secret: Swift.String?
+  public var screen_title: Swift.String?
   @objc override dynamic public init()
-  public class func with(paymentMode: FrontPay.PAYMENT_MODE, merchantId: Swift.String, merchantSecret: Swift.String) -> FrontPay.FrontPayConfig
+  public class func with(paymentMode: FrontPay.PAYMENT_MODE, merchantId: Swift.String, merchantSecret: Swift.String, screenTitle: Swift.String? = nil) -> FrontPay.FrontPayConfig
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class FrontPayPayment : ObjectiveC.NSObject {
