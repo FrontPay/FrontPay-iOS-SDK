@@ -1,0 +1,53 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FrontPay
+import Foundation
+@_exported import FrontPay
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public struct FrontPayError : Swift.Codable, Swift.Error {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum PAYMENT_MODE : Swift.String {
+  case TEST
+  case LIVE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class FrontPayConfig : ObjectiveC.NSObject {
+  public var mode: FrontPay.PAYMENT_MODE
+  public var fp_merchant_id: Swift.String?
+  public var fp_merchant_secret: Swift.String?
+  @objc override dynamic public init()
+  public class func with(paymentMode: FrontPay.PAYMENT_MODE, merchantId: Swift.String, merchantSecret: Swift.String) -> FrontPay.FrontPayConfig
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FrontPayPayment : ObjectiveC.NSObject {
+  public var amount: Swift.Double?
+  public var currency: Swift.String?
+  public var transaction_reference: Swift.String?
+  public var fp_param1: Swift.String?
+  public var fp_param2: Swift.String?
+  public var fp_param3: Swift.String?
+  @objc override dynamic public init()
+  public class func with(amount: Swift.Double, currency: Swift.String, transaction_reference: Swift.String, fp_param1: Swift.String? = nil, fp_param2: Swift.String? = nil, fp_param3: Swift.String? = nil) -> FrontPay.FrontPayPayment
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FrontPayPaymentManager : ObjectiveC.NSObject {
+  public var completionHandlerSuccess: (([Swift.String : Any]?) -> Swift.Void)?
+  public var completionHandlerFailed: (([Swift.String : Any]?) -> Swift.Void)?
+  @objc override dynamic public init()
+  public class func paywith(viewController: UIKit.UIViewController, config: FrontPay.FrontPayConfig, payment: FrontPay.FrontPayPayment) -> FrontPay.FrontPayPaymentManager
+  public class func paymentInquiry(config: FrontPay.FrontPayConfig, transaction_reference: Swift.String) -> FrontPay.FrontPayPaymentManager
+  @objc deinit
+}
+extension FrontPay.PAYMENT_MODE : Swift.Equatable {}
+extension FrontPay.PAYMENT_MODE : Swift.Hashable {}
+extension FrontPay.PAYMENT_MODE : Swift.RawRepresentable {}

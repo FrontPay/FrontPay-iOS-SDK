@@ -1,0 +1,11 @@
+framework module FrontPay {
+  umbrella header "FrontPay.h"
+
+  export *
+  module * { export * }
+}
+
+module FrontPay.Swift {
+    header "FrontPay-Swift.h"
+    requires objc
+}
