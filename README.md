@@ -30,7 +30,7 @@ This integration guide is for iOS developers who want to integrate FrontPay fram
 ## Getting Started <a name="GettingStarted"></a>
 
 ### Integration: <a name="Integration"></a>
-1. At first download sdk from https://github.com/waseemsarwar/FrontPay). Then open the folder frameworks.
+1. At first download sdk from https://github.com/FrontPay/FrontPay-iOS-SDK Then open the folder frameworks.
 
 <img width="743" alt="Screenshot 2021-12-18 at 6 14 40 PM" src="https://user-images.githubusercontent.com/1830438/146642463-09575846-2cc6-4871-b0a0-8310fba96fe5.png">
 
